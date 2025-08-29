@@ -24,8 +24,8 @@ public class SortService {
         if (config.getOrder() == Order.DESC) {
             cmp = cmp.reversed();
         }
-        for (DepartmentData dd : departments.values()) {
-            dd.getEmployees().sort(cmp);
+        for (DepartmentData departmentData : departments.values()) {
+            departmentData.getEmployees().sort(cmp);
         }
     }
 }
