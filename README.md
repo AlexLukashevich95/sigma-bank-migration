@@ -8,7 +8,7 @@
 
 ## Сборка
 ```bash
-mvn -q -DskipTests package
+mvn clean package -DskipTests
 ```
 Артефакт: `target/sigma-bank-migration-1.0.0.jar`
 
