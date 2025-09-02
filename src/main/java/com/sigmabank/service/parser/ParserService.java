@@ -3,6 +3,7 @@ package com.sigmabank.service.parser;
 import com.sigmabank.service.parser.impl.EmployeeParserService;
 import com.sigmabank.service.parser.impl.ManagerParserService;
 import com.sigmabank.state.ProcessingState;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -16,13 +17,12 @@ import java.util.stream.Stream;
 
 import static com.sigmabank.utils.Utility.splitCsv;
 
+@Service
 public class ParserService {
     private final List<EntityParserService> parsers;
 
-    public ParserService() {
-        this.parsers = new ArrayList<>();
-        this.parsers.add(new EmployeeParserService());
-        this.parsers.add(new ManagerParserService());
+    public ParserService(List<EntityParserService> parsers) {
+        this.parsers = new ArrayList<>(parsers);
     }
 
     public List<Path> findInputFiles(Path directory) throws IOException {

@@ -4,12 +4,14 @@ import com.sigmabank.model.DepartmentData;
 import com.sigmabank.model.Employee;
 import com.sigmabank.model.Manager;
 import com.sigmabank.state.ProcessingState;
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class DepartmentService {
 
     public Map<String, DepartmentData> buildDepartments(ProcessingState state) {

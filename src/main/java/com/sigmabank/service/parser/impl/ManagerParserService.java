@@ -3,11 +3,13 @@ package com.sigmabank.service.parser.impl;
 import com.sigmabank.model.Manager;
 import com.sigmabank.service.parser.EntityParserService;
 import com.sigmabank.state.ProcessingState;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 import static com.sigmabank.utils.Utility.isValidData;
 
+@Service
 public class ManagerParserService implements EntityParserService {
     public ManagerParserService() {
     }

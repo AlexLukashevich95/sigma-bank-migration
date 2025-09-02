@@ -5,12 +5,14 @@ import com.sigmabank.enums.Order;
 import com.sigmabank.enums.SortBy;
 import com.sigmabank.model.DepartmentData;
 import com.sigmabank.model.Employee;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.Optional;
 
+@Service
 public class SortService {
 
     public void sortEmployees(Map<String, DepartmentData> departments, Config config) {

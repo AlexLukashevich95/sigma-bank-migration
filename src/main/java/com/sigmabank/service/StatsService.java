@@ -4,6 +4,7 @@ import com.sigmabank.config.Config;
 import com.sigmabank.enums.Output;
 import com.sigmabank.model.DepartmentData;
 import com.sigmabank.model.StatData;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -15,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Service
 public class StatsService {
 
     public void outputStats(Map<String, DepartmentData> departments, Config config) {

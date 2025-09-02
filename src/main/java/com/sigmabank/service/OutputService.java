@@ -2,6 +2,7 @@ package com.sigmabank.service;
 
 import com.sigmabank.model.DepartmentData;
 import com.sigmabank.model.Employee;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class OutputService {
 
     private static final String ERROR_LOG = "error.log";
